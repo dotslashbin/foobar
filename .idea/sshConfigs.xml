@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig authType="OPEN_SSH" host="git@github.com:dotslashbin/foobar.git" id="cd24642d-0664-4e79-9d2a-e0a9e3df01fb" port="22" customName="dotslashbin" nameFormat="CUSTOM" username="dotslashbin" useOpenSSHConfig="true">
+      <sshConfig host="github.com" id="cd24642d-0664-4e79-9d2a-e0a9e3df01fb" keyPath="\\wsl.localhost\Ubuntu\home\joshua\.ssh\joshuarpf_rsa" port="22" customName="dotslashbin" nameFormat="CUSTOM" username="git" useOpenSSHConfig="true">
         <option name="customName" value="dotslashbin" />
       </sshConfig>
     </configs>
