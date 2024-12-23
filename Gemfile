@@ -61,3 +61,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'hotwire-rails'
+
+gem 'rails_live_reload'

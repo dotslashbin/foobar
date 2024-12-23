@@ -1,2 +1,17 @@
 <h1>Products#index</h1>
 <p>Find me in app/views/products/index.html.erb</p>
+<div>
+TOTAL: <%= @products.count %>
+</div>
+
+<div>
+  <%= link_to "Create", new_product_path %>
+</div>
+
+<div style="margin-top: 20px;">
+<% @products.each do |product| %>
+  <div >
+   <a href="/products/<%= product.id %>"><%= product.name %></a></br>
+  </div>
+<% end %>
+</div>
