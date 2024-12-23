@@ -1,2 +1,14 @@
 <h1>Products#new</h1>
-<p>Find me in app/views/products/new.html.erb</p>
+<%= form_with model: @product do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+
+  <div>
+    <%= link_to "back to list", products_path %>
+  </div>
+<% end %>
