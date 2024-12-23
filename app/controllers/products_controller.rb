@@ -15,6 +15,8 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       redirect_to @product
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -23,6 +25,6 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.expect(product: [:name])
+    params.require(:product).permit(:name)
   end
 end
