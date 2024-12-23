@@ -1,3 +1,21 @@
-class ProductsController
-  def show: -> untyped
+class ProductsController < ApplicationController
+  @product: untyped
+  @products: untyped
+  @name: String
+
+  def index: () -> void
+
+  def show: -> void
+
+  def new: -> void
+
+  def create: -> void
+
+  def edit: -> void
+
+  private
+
+  def get_greeting:(ActionController::Parameters | String) -> string
+
+  def product_params: -> void
 end

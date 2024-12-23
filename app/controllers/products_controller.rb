@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
+    @name = get_greeting(params[:name]? params[:name] : "joshua")
   end
 
   def show
@@ -26,5 +27,9 @@ class ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit(:name)
+  end
+
+  def get_greeting(name)
+    "Hello, #{name.capitalize}!"
   end
 end
