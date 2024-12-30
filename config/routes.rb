@@ -23,7 +23,10 @@ Rails.application.routes.draw do
 
   get "/about", to: "pages#about"
 
+  get "/scratch", to: "scratch#index"
+
   resources :products
 
-  get "/scratch", to: "scratch#index"
+  resources :articles
+
 end
