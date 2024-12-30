@@ -1,14 +1,9 @@
-<h1>Products#new</h1>
-<%= form_with model: @product do |form| %>
+<%= form_with model: @product, url: products_path do |form| %>
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
   <div>
-    <%= form.submit %>
-  </div>
-
-  <div>
-    <%= link_to "back to list", products_path %>
+    <%= form.submit "Create Product" %>
   </div>
 <% end %>

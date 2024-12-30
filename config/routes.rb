@@ -15,6 +15,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index" blah blah
+
+  # namespace :samples do
+  #   resources :products
+  # end
+
   resources :products
 
   get "/scratch", to: "scratch#index"

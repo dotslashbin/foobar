@@ -66,3 +66,5 @@ end
 gem "hotwire-rails"
 
 gem "rails_live_reload"
+
+gem "bcrypt"
