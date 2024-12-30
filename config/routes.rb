@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   # end
   root 'pages#home'
 
+  get "/about", to: "pages#about"
+
   resources :products
 
   get "/scratch", to: "scratch#index"
