@@ -18,9 +18,32 @@ class ArticlesController < ApplicationController
     # render plain: params[:article]
 
     @article = Article.new(article_params)
-    @article.save
+    if @article.save
+      redirect_to @article
+    else
+      render 'new'
+    end
+  end
 
-    redirect_to @article
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      ### This :notice is read as "notice" in the view
+      flash[:notice] = "Article was successfully updated."
+      redirect_to @article
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path, notice: "You deleted article with id #{params[:id]}"
   end
 
   private
@@ -28,4 +51,4 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :description)
   end
- end
+end

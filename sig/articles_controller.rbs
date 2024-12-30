@@ -3,6 +3,8 @@ class ArticlesController
 
   @articles: ::ActiveRecord::Relation
 
+  def destroy: -> void
+
   def index: -> void
 
   def new: -> void

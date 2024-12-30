@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
   resources :products
 
-  resources :articles, only: [:new, :create, :show, :index]
+  # resources :articles, only: [:new, :create, :show, :index, :edit, :update, :destroy]
 
+  resources :articles
 end
