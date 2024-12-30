@@ -1,4 +1,17 @@
 class ArticlesController
+  @article: ::Article
+
+  @articles: ::ActiveRecord::Relation
+
+  def index: -> void
+
+  def new: -> void
 
   def show: -> void
+
+  def create: -> void
+
+  private
+
+  def article_params: -> void
 end

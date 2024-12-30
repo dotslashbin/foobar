@@ -27,6 +27,6 @@ Rails.application.routes.draw do
 
   resources :products
 
-  resources :articles
+  resources :articles, only: [:new, :create, :show, :index]
 
 end
