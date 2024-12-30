@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   # namespace :samples do
   #   resources :products
   # end
+  root 'pages#home'
 
   resources :products
 
